@@ -10,6 +10,8 @@ const runQueries = async () => {
       classNumber: 1,
     },
   });
+  const students = await prisma.student.findMany();
+  console.log(students);
 };
 
 runQueries(); // Run the queries

@@ -1,0 +1,25 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite" // The provider tells Prisma what database we are using
+  url      = env("DATABASE_URL") // The URL tells Prisma where our database is located, we get this value from the .env file using the env() function
+}
+
+model Student {
+  id          Int    @id @default(autoincrement())
+  name        String
+  classNumber Int
+}
+
+model Animal {
+  id         Int     @id @default(autoincrement())
+  name       String
+  kind       String
+  age        String
+  hasBeenFed Boolean
+}
