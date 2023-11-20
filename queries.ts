@@ -26,6 +26,29 @@ const runQueries = async () => {
     },
   });
   console.log(studentWithId2);
+
+  const firstStudentClass1 = await prisma.student.findFirst({
+    where: {
+      classNumber: 1,
+    },
+  });
+  console.log(firstStudentClass1);
+
+  await prisma.student.update({
+    where: {
+      id: 3,
+    },
+    data: {
+      classNumber: 6,
+    },
+  });
+
+  const updatedStudent = await prisma.student.findUnique({
+    where: {
+      id: 2,
+    },
+  });
+  console.log(updatedStudent);
 };
 
 runQueries(); // Run the queries
