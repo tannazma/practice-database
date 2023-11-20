@@ -20,6 +20,7 @@ model Animal {
   id         Int     @id @default(autoincrement())
   name       String
   kind       String
-  age        String
+  age        Int
   hasBeenFed Boolean
+  imgUrl     String
 }
