@@ -1,0 +1,7 @@
+[
+    { "id": 1, "name": "Albert Einstein", "classNumber": 1 },
+    { "id": 2, "name": "Richard Feynman", "classNumber": 2 },
+    { "id": 3, "name": "Enrico Fermi", "classNumber": 2 },
+    { "id": 4, "name": "Robert Oppenheimer", "classNumber": 1 },
+    { "id": 5, "name": "Hans Bethe", "classNumber": 3 }
+  ]
