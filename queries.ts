@@ -49,6 +49,18 @@ const runQueries = async () => {
     },
   });
   console.log(updatedStudent);
+
+  const allStudentsBeforeDelet = await prisma.student.findMany();
+  console.log(allStudentsBeforeDelet.length);
+
+  await prisma.student.delete({
+    where: {
+      id: 2,
+    },
+  });
+
+  const allStudentAfterDelet = await prisma.student.findMany();
+  console.log(allStudentAfterDelet.length);
 };
 
 runQueries(); // Run the queries
