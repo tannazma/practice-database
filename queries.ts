@@ -10,8 +10,22 @@ const runQueries = async () => {
       classNumber: 1,
     },
   });
-  const students = await prisma.student.findMany();
-  console.log(students);
+  // const students = await prisma.student.findMany();
+  console.log("students");
+
+  const studentsClass1 = await prisma.student.findMany({
+    where: {
+      classNumber: 1,
+    },
+  });
+  console.log(studentsClass1);
+
+  const studentWithId2 = await prisma.student.findUnique({
+    where: {
+      id: 2,
+    },
+  });
+  console.log(studentWithId2);
 };
 
 runQueries(); // Run the queries
